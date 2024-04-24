@@ -1,5 +1,5 @@
-<div class="px-16 py-3">
-    <div class="flex items-center justify-between h-[100vh]">
+<div class="">
+    <div class="flex items-center justify-between h-[100vh] px-16 py-3">
         <div class="flex flex-col gap-3 justify-items-start ">
             <h1 class="text-[40px] leading-14 text-[#0F172A] font-bold w-[480px]">Unlock Your Potential with Byway</h1>
             <h3 class="text-[#64748B] w-[590px]">Welcome to Byway, where learning knows no bounds. We believe that education is the key to 
@@ -11,7 +11,54 @@
         </div>
         <img src="../../../assets/banner-image.png"/>
     </div>
-    <div>
-        sdksklddklsdkl
+    <div class="bg-[#F8FAFC] flex items-center justify-between px-16 py-8">
+        <div class="flex flex-col items-center border-r-4 pr-28 border-solid border-[#E2E8F0]">
+            <h1 class="font-bold text-[32px]">250+</h1>
+            <p class="text-[14px] font-medium">Courses by our best mentors</p>
+        </div>
+        <div class="flex flex-col items-center border-r-4 pr-28 border-solid border-[#E2E8F0]">
+            <h1 class="font-bold text-[32px]">1000+</h1>
+            <p class="text-[14px] font-medium">Courses by our best mentors</p>
+        </div>
+        <div class="flex flex-col items-center border-r-4 pr-28 border-solid border-[#E2E8F0]">
+            <h1 class="font-bold text-[32px]">15+</h1>
+            <p class="text-[14px] font-medium">Courses by our best mentors</p>
+        </div>
+        <div class="flex flex-col items-center ">
+            <h1 class="font-bold text-[32px]">2400+</h1>
+            <p class="text-[14px] font-medium">Courses by our best mentors</p>
+        </div>
+    </div>
+    <div class="px-16 py-16">
+        <div class="flex justify-between">
+            <h1 class="font-bold text-[24px] text-[#0F172A]">Top Categories</h1>
+            <p class="text-[#3B82F6] text-[14px]">See All</p>
+        </div>
+        <div class="flex justify-between mt-6">
+            <app-category-card 
+                [imageSrc]="'../../assets/astrology.png'"
+                 [title]="'Astrology'"
+                 [courseCount]="11"
+            >
+            </app-category-card>
+            <app-category-card 
+                [imageSrc]="'../../assets/code-browser.png'"
+                 [title]="'Development'"
+                 [courseCount]="12"
+            >
+            </app-category-card>
+            <app-category-card 
+                [imageSrc]="'../../assets/briefcase.png'"
+                 [title]="'Marketing'"
+                 [courseCount]="12"
+            >
+            </app-category-card>
+            <app-category-card 
+                [imageSrc]="'../../assets/physics.png'"
+                 [title]="'Physics'"
+                 [courseCount]="14"
+            >
+            </app-category-card>
+        </div>
     </div>
 </div>
