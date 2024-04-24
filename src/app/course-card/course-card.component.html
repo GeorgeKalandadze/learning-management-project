@@ -1,0 +1,11 @@
+<div class="rounded-lg border-[1px] border-solid border-[#E2E8F0] px-4 py-2 shadow-md shadow-[#3B82F61F] flex flex-col gap-2">
+    <img [src]="imageUrl" class="w-full h-[139px] rounded-lg"/>
+    <h1 class="text-[#0F172A] text-[18px] font-bold">{{ title }}</h1>
+    <p class="text-[#334155] text-[14px]">By {{ author }}</p>
+    <div class="flex items-center">
+        <img *ngFor="let _ of starsArray" src="../../assets/star.png" class="w-[20px] h-[20px]"/>
+        <p class="text-[#334155] text-[12px] font-bold ml-3">({{ ratings }} Ratings)</p>
+    </div>
+    <p class="text-[#334155] text-[14px]">{{ totalHours }} Total Hours. {{ totalLectures }} Lectures. {{ level }}</p>
+    <h1 class="text-[#0F172A] font-bold text-[20px]">{{ price }}</h1>
+</div>
