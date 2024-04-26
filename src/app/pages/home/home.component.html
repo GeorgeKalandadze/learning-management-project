@@ -35,30 +35,13 @@
             <p class="text-[#3B82F6] text-[14px]">See All</p>
         </div>
         <div class="flex justify-between mt-6">
-            <app-category-card 
-                [imageSrc]="'../../assets/astrology.png'"
-                 [title]="'Astrology'"
-                 [courseCount]="11"
-            >
-            </app-category-card>
-            <app-category-card 
-                [imageSrc]="'../../assets/code-browser.png'"
-                 [title]="'Development'"
-                 [courseCount]="12"
-            >
-            </app-category-card>
-            <app-category-card 
-                [imageSrc]="'../../assets/briefcase.png'"
-                 [title]="'Marketing'"
-                 [courseCount]="12"
-            >
-            </app-category-card>
-            <app-category-card 
-                [imageSrc]="'../../assets/physics.png'"
-                 [title]="'Physics'"
-                 [courseCount]="14"
-            >
-            </app-category-card>
+            <ng-container *ngFor="let category of categories">
+                <app-category-card 
+                    [imageSrc]="category.imageSrc"
+                    [title]="category.title"
+                    [courseCount]="category.courseCount"
+                ></app-category-card>
+            </ng-container>
         </div>
         
     </div>
@@ -68,50 +51,20 @@
             <p class="text-[#3B82F6] text-[14px]">See All</p>
         </div>
         <div class="flex justify-between mt-6">
-            <app-course-card 
-                [imageUrl]="'../../assets/programming-course.png'"
-                [title]="'Beginner’s Guide to Design'"
-                [author]="'Ronald Richards'"
-                [ratings]="1200"
-                [totalHours]="22"
-                [totalLectures]="155"
-                [level]="'Beginner'"
-                [price]="149.9"
-                [starCount]="5"
-            ></app-course-card>
-            <app-course-card 
-                [imageUrl]="'../../assets/programming-course.png'"
-                [title]="'Beginner’s Guide to Design'"
-                [author]="'Ronald Richards'"
-                [ratings]="1200"
-                [totalHours]="22"
-                [totalLectures]="155"
-                [level]="'Beginner'"
-                [price]="149.9"
-                [starCount]="5"
-            ></app-course-card>
-            <app-course-card 
-                [imageUrl]="'../../assets/programming-course.png'"
-                [title]="'Beginner’s Guide to Design'"
-                [author]="'Ronald Richards'"
-                [ratings]="1200"
-                [totalHours]="22"
-                [totalLectures]="155"
-                [level]="'Beginner'"
-                [price]="149.9"
-                [starCount]="5"
-            ></app-course-card>
-            <app-course-card 
-                [imageUrl]="'../../assets/programming-course.png'"
-                [title]="'Beginner’s Guide to Design'"
-                [author]="'Ronald Richards'"
-                [ratings]="1200"
-                [totalHours]="22"
-                [totalLectures]="155"
-                [level]="'Beginner'"
-                [price]="149.9"
-                [starCount]="5"
-            ></app-course-card>
+            <ng-container *ngFor="let course of courses">
+                <app-course-card 
+                [imageUrl]="course.imageUrl"
+                [title]="course.title"
+                [author]="course.author"
+                [ratings]="course.ratings"
+                [totalHours]="course.totalHours"
+                [totalLectures]="course.totalLectures"
+                [level]="course.level"
+                [price]="course.price"
+                [starCount]="course.starCount"
+                >
+                </app-course-card>
+            </ng-container>
         </div>
     </div>
     <div class="px-16 py-10">
@@ -120,46 +73,15 @@
             <p class="text-[#3B82F6] text-[14px]">See All</p>
         </div>
         <div class="flex justify-between mt-6">
-           <app-instructor-card
-            [imageUrl]="'../../assets/programmer.jpg'"
-            [fullName]="'Ronald Richards'"
-            [profession]="'UI/UX Designer'"
-            [ratings]="4.9"
-            [studentsCount]="2400"
-           >
-           </app-instructor-card>
-           <app-instructor-card
-            [imageUrl]="'../../assets/programmer.jpg'"
-            [fullName]="'Ronald Richards'"
-            [profession]="'UI/UX Designer'"
-            [ratings]="4.9"
-            [studentsCount]="2400"
-           >
-           </app-instructor-card>
-           <app-instructor-card
-            [imageUrl]="'../../assets/programmer.jpg'"
-            [fullName]="'Ronald Richards'"
-            [profession]="'UI/UX Designer'"
-            [ratings]="4.9"
-            [studentsCount]="2400"
-           >
-           </app-instructor-card>
-           <app-instructor-card
-            [imageUrl]="'../../assets/programmer.jpg'"
-            [fullName]="'Ronald Richards'"
-            [profession]="'UI/UX Designer'"
-            [ratings]="4.9"
-            [studentsCount]="2400"
-           >
-           </app-instructor-card>
-           <app-instructor-card
-            [imageUrl]="'../../assets/programmer.jpg'"
-            [fullName]="'Ronald Richards'"
-            [profession]="'UI/UX Designer'"
-            [ratings]="4.9"
-            [studentsCount]="2400"
-           >
-           </app-instructor-card>
+           <ng-container *ngFor="let instructor of instructors">
+                <app-instructor-card
+                    [imageUrl]="instructor.imageUrl"
+                    [fullName]="instructor.fullName"
+                    [profession]="instructor.profession"
+                    [ratings]="instructor.ratings"
+                    [studentsCount]="instructor.studentsCount"
+                ></app-instructor-card>
+            </ng-container>
         </div>
     </div>
     <div class="bg-[#F8FAFC] px-16 py-8">
@@ -175,27 +97,16 @@
             </div>
         </div>
         <div class="flex gap-8 mt-6">
-            <app-customer-card 
-                [comment]="'Byways tech courses are top-notch! As someone whos always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. '"
-                [imageUrl]="'../../assets/programmer.jpg'"
-                [fullName]="'Ronald Richards'"
-                [profession]="'UI/UX Designer'"
-            >
-            </app-customer-card>
-            <app-customer-card 
-                [comment]="'Byways tech courses are top-notch! As someone whos always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. '"
-                [imageUrl]="'../../assets/programmer.jpg'"
-                [fullName]="'Ronald Richards'"
-                [profession]="'UI/UX Designer'"
-            >
-            </app-customer-card>
-            <app-customer-card 
-                [comment]="'Byways tech courses are top-notch! As someone whos always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. '"
-                [imageUrl]="'../../assets/programmer.jpg'"
-                [fullName]="'Ronald Richards'"
-                [profession]="'UI/UX Designer'"
-            >
-            </app-customer-card>
+           <ng-container *ngFor="let comment of comments">
+                <div class="carousel-item">
+                    <app-customer-card 
+                    [comment]="comment.comment"
+                    [imageUrl]="comment.imageUrl"
+                    [fullName]="comment.fullName"
+                    [profession]="comment.profession"
+                    ></app-customer-card>
+                </div>
+            </ng-container>
         </div>
     </div>
     <div class="px-36 py-10 flex flex-col gap-6">
