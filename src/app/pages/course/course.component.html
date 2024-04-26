@@ -1,0 +1,171 @@
+<div>
+    <div class="bg-[#F8FAFC] flex flex-col px-16 py-16">
+        <div class="flex flex-col gap-8">
+            <h1 class="font-bold text-[40px] leading-9">Design Courses</h1>
+            <h2 class="font-bold text-[23px] leading-6">All Development Courses</h2>
+        </div>
+        <div class="mt-8 flex justify-between">
+            <div class="flex flex-col gap-12 items-start">
+                <button class="text-[14px] flex items-center px-[24px] py-[10px] border-[2px] border-solid border-black rounded-xl gap-2">
+                    <img src="../../../assets/filter-icon.png" alt=""> Filter
+                </button>
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <button class="flex items-center justify-between border-b-[2px] border-gray-300 pb-4 w-[400px] font-bold " (click)="toggleDropdown('dropdown1')" >
+                            Rating <img src="../../../assets/arrow-up.png" alt="" [ngClass]="{'rotate-180': dropdowns['dropdown1']}">
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4" *ngIf="dropdowns['dropdown1']"  [ngClass]="{'animate-fade-in': dropdowns['dropdown1'], 'animate-fade-out': !dropdowns['dropdown1'], 'hidden': !dropdowns['dropdown1']}">
+                        <div class="flex">
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                        </div>
+                        <div class="flex">
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                        </div>
+                        <div class="flex">
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                        </div>
+                        <div class="flex">
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                        </div>
+                        <div class="flex">
+                            <img src="../../../assets/star.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                            <img src="../../../assets/star-gray.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <button 
+                            class="flex items-center justify-between border-b-[2px] border-gray-300 pb-4 w-[400px]  font-bold " 
+                            (click)="toggleDropdown('dropdown2')" 
+                            
+                        >
+                            Number of Chapters <img src="../../../assets/arrow-up.png" alt="" [ngClass]="{'rotate-180': dropdowns['dropdown2']}">
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4" *ngIf="dropdowns['dropdown2']"  [ngClass]="{'animate-fade-in': dropdowns['dropdown2'], 'animate-fade-out': !dropdowns['dropdown2'], 'hidden': !dropdowns['dropdown2']}">
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">1-10</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">10-15</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">15-20</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">20-25</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <button 
+                            class="flex items-center justify-between border-b-[2px] border-gray-300 pb-4 w-[400px]  font-bold " 
+                            (click)="toggleDropdown('dropdown2')" 
+                            
+                        >
+                            Number of Chapters <img src="../../../assets/arrow-up.png" alt="" [ngClass]="{'rotate-180': dropdowns['dropdown2']}">
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4" *ngIf="dropdowns['dropdown2']"  [ngClass]="{'animate-fade-in': dropdowns['dropdown2'], 'animate-fade-out': !dropdowns['dropdown2'], 'hidden': !dropdowns['dropdown2']}">
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">1-10</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">10-15</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">15-20</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">20-25</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div>
+                        <button 
+                            class="flex items-center justify-between border-b-[2px] border-gray-300 pb-4 w-[400px]  font-bold " 
+                            (click)="toggleDropdown('dropdown2')" 
+                            
+                        >
+                            Number of Chapters <img src="../../../assets/arrow-up.png" alt="" [ngClass]="{'rotate-180': dropdowns['dropdown2']}">
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-4" *ngIf="dropdowns['dropdown2']"  [ngClass]="{'animate-fade-in': dropdowns['dropdown2'], 'animate-fade-out': !dropdowns['dropdown2'], 'hidden': !dropdowns['dropdown2']}">
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">1-10</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">10-15</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">15-20</p>
+                       </div>
+                       <div class="flex items-center gap-4">
+                            <input type="checkbox"/>
+                            <p class="text-[16px] text-[#0F172A]">20-25</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-end">
+                <div class="flex items-center gap-2">
+                    <p class="font-medium">Sort By</p>
+                    <button class="text-[14px] flex items-center px-[24px] py-[10px] border-[2px] border-solid border-black rounded-xl gap-2">
+                        Relevance <img src="../../../assets/arrow-up.png" alt="" class="rotate-180">
+                    </button>
+                </div>
+                <div class="grid grid-cols-3 gap-6 mt-6">
+                    <ng-container *ngFor="let course of courses">
+                        <app-course-card 
+                            [imageUrl]="course.imageUrl"
+                            [title]="course.title"
+                            [author]="course.author"
+                            [ratings]="course.ratings"
+                            [totalHours]="course.totalHours"
+                            [totalLectures]="course.totalLectures"
+                            [level]="course.level"
+                            [price]="course.price"
+                            [starCount]="course.starCount"
+                        >
+                        </app-course-card>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

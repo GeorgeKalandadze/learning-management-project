@@ -5,3 +5,46 @@
 * {
     font-family: sans-serif;
 }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none; 
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.3s ease-out;
+}
+
+.rotate-180 {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+

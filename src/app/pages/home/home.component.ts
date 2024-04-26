@@ -5,7 +5,7 @@ import { InstructorCardComponent } from '../../components/instructor-card/instru
 import { CustomerCardComponent } from '../../components/customer-card/customer-card.component';
 import { LearningManagementService } from '../../services/learning-management.service';
 import { NgFor } from '@angular/common';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -14,7 +14,8 @@ import { NgFor } from '@angular/common';
     CourseCardComponent,
     InstructorCardComponent,
     CustomerCardComponent,
-    NgFor
+    NgFor,
+    RouterLink,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -26,11 +27,10 @@ export class HomeComponent {
   categories: any[] = [];
 
   constructor(private learningManagementService: LearningManagementService) {}
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.comments = this.learningManagementService.getComments();
     this.instructors = this.learningManagementService.getInstructors();
     this.courses = this.learningManagementService.getCourses();
     this.categories = this.learningManagementService.getCategories();
   }
-
 }
