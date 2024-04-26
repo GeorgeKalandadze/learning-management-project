@@ -1,17 +1,17 @@
 <div>
-    <div class="bg-[#F8FAFC] flex flex-col px-16 py-16">
+    <div class=" flex flex-col px-16 py-16">
         <div class="flex flex-col gap-8">
             <h1 class="font-bold text-[40px] leading-9">Design Courses</h1>
             <h2 class="font-bold text-[23px] leading-6">All Development Courses</h2>
         </div>
-        <div class="mt-8 flex justify-between">
+        <div class="mt-8 flex justify-between gap-10">
             <div class="flex flex-col gap-12 items-start">
                 <button class="text-[14px] flex items-center px-[24px] py-[10px] border-[2px] border-solid border-black rounded-xl gap-2">
                     <img src="../../../assets/filter-icon.png" alt=""> Filter
                 </button>
-                <div class="flex flex-col gap-3">
-                    <div>
-                        <button class="flex items-center justify-between border-b-[2px] border-gray-300 pb-4 w-[400px] font-bold " (click)="toggleDropdown('dropdown1')" >
+                <div class="flex flex-col gap-3 w-full">
+                    <div >
+                        <button class="w-full flex items-center justify-between border-b-[2px] border-gray-300 pb-4 font-bold " (click)="toggleDropdown('dropdown1')" >
                             Rating <img src="../../../assets/arrow-up.png" alt="" [ngClass]="{'rotate-180': dropdowns['dropdown1']}">
                         </button>
                     </div>
@@ -53,10 +53,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-3">
-                    <div>
+                <div class="flex flex-col gap-3 w-full">
+                    <div class="w-full">
                         <button 
-                            class="flex items-center justify-between border-b-[2px] border-gray-300 pb-4 w-[400px]  font-bold " 
+                            class="flex items-center justify-between border-b-[2px] border-gray-300 pb-4 w-full font-bold " 
                             (click)="toggleDropdown('dropdown2')" 
                             
                         >
@@ -141,14 +141,14 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-end">
+            <div class="flex flex-col items-end w-full">
                 <div class="flex items-center gap-2">
                     <p class="font-medium">Sort By</p>
                     <button class="text-[14px] flex items-center px-[24px] py-[10px] border-[2px] border-solid border-black rounded-xl gap-2">
                         Relevance <img src="../../../assets/arrow-up.png" alt="" class="rotate-180">
                     </button>
                 </div>
-                <div class="grid grid-cols-3 gap-6 mt-6">
+                <div class="grid grid-cols-3 gap-6 mt-6 w-full 2xl:gap-10">
                     <ng-container *ngFor="let course of courses">
                         <app-course-card 
                             [imageUrl]="course.imageUrl"
@@ -166,6 +166,44 @@
                 </div>
             </div>
         </div>
-        
+    </div>
+    <div class="px-16 py-10">
+        <div class="flex justify-between">
+            <h1 class="font-bold text-[24px] text-[#0F172A]">Top Instructors</h1>
+            <p class="text-[#3B82F6] text-[14px]">See All</p>
+        </div>
+        <div class="grid grid-cols-5 gap-20 mt-6">
+           <ng-container *ngFor="let instructor of instructors">
+                <app-instructor-card
+                    [imageUrl]="instructor.imageUrl"
+                    [fullName]="instructor.fullName"
+                    [profession]="instructor.profession"
+                    [ratings]="instructor.ratings"
+                    [studentsCount]="instructor.studentsCount"
+                ></app-instructor-card>
+            </ng-container>
+        </div>
+    </div>
+    <div class="px-16 py-20">
+        <div class="flex justify-between">
+            <h1 class="font-bold text-[24px] text-[#0F172A]">Featured Courses</h1>
+            <button class="text-[#3B82F6] text-[14px]"><a class="font-medium" routerLink="/courses">See All</a></button>
+        </div>
+        <div class="grid grid-cols-4 gap-20 mt-6">
+            <ng-container *ngFor="let course of courses.slice(0, 4)">
+                <app-course-card 
+                    [imageUrl]="course.imageUrl"
+                    [title]="course.title"
+                    [author]="course.author"
+                    [ratings]="course.ratings"
+                    [totalHours]="course.totalHours"
+                    [totalLectures]="course.totalLectures"
+                    [level]="course.level"
+                    [price]="course.price"
+                    [starCount]="course.starCount"
+                >
+                </app-course-card>
+            </ng-container>
+        </div>
     </div>
 </div>

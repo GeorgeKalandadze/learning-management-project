@@ -2,11 +2,12 @@ import { NgIf, NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { LearningManagementService } from '../../services/learning-management.service';
 import { CourseCardComponent } from '../../components/course-card/course-card.component';
+import { InstructorCardComponent } from '../../components/instructor-card/instructor-card.component';
 
 @Component({
   selector: 'app-course',
   standalone: true,
-  imports: [NgIf, NgClass, CourseCardComponent, NgFor],
+  imports: [NgIf, NgClass, CourseCardComponent, NgFor, InstructorCardComponent],
   templateUrl: './course.component.html',
   styleUrl: './course.component.css',
 })

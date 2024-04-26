@@ -50,18 +50,18 @@
             <h1 class="font-bold text-[24px] text-[#0F172A]">Top Courses</h1>
             <button class="text-[#3B82F6] text-[14px]"><a class="font-medium" routerLink="/courses">See All</a></button>
         </div>
-        <div class="flex justify-between mt-6">
+        <div class="grid grid-cols-4 gap-20 mt-6">
             <ng-container *ngFor="let course of courses.slice(0, 4)">
                 <app-course-card 
-                [imageUrl]="course.imageUrl"
-                [title]="course.title"
-                [author]="course.author"
-                [ratings]="course.ratings"
-                [totalHours]="course.totalHours"
-                [totalLectures]="course.totalLectures"
-                [level]="course.level"
-                [price]="course.price"
-                [starCount]="course.starCount"
+                    [imageUrl]="course.imageUrl"
+                    [title]="course.title"
+                    [author]="course.author"
+                    [ratings]="course.ratings"
+                    [totalHours]="course.totalHours"
+                    [totalLectures]="course.totalLectures"
+                    [level]="course.level"
+                    [price]="course.price"
+                    [starCount]="course.starCount"
                 >
                 </app-course-card>
             </ng-container>
@@ -72,7 +72,7 @@
             <h1 class="font-bold text-[24px] text-[#0F172A]">Top Instructors</h1>
             <p class="text-[#3B82F6] text-[14px]">See All</p>
         </div>
-        <div class="flex justify-between mt-6">
+        <div class="grid grid-cols-5 gap-20 mt-6">
            <ng-container *ngFor="let instructor of instructors">
                 <app-instructor-card
                     [imageUrl]="instructor.imageUrl"
