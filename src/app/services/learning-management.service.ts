@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LearningManagementService {
-  
   /********************************* comments *********************************/
   private comments: any[] = [
     {
@@ -74,6 +73,7 @@ export class LearningManagementService {
 
   private courses: any[] = [
     {
+      id: 1,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -85,6 +85,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 2,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -96,6 +97,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 3,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -107,6 +109,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 4,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -118,6 +121,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 5,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -129,6 +133,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 6,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -140,6 +145,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 7,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -151,6 +157,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 8,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -162,6 +169,7 @@ export class LearningManagementService {
       starCount: 5,
     },
     {
+      id: 9,
       imageUrl: '../../assets/programming-course.png',
       title: 'Beginner’s Guide to Design',
       author: 'Ronald Richards',
@@ -214,5 +222,9 @@ export class LearningManagementService {
 
   getCategories(): any[] {
     return this.categories;
+  }
+
+  getCourseById(id: number): any {
+    return this.courses.find((course) => course.id === id);
   }
 }
