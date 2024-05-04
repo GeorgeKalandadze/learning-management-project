@@ -4,6 +4,7 @@ import { CustomerCardComponent } from '../../components/customer-card/customer-c
 import { NgFor } from '@angular/common';
 import { CourseCardComponent } from '../../components/course-card/course-card.component';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-single-course',
@@ -20,7 +21,8 @@ export class SingleCourseComponent {
 
   constructor(
     private learningManagementService: LearningManagementService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -33,12 +35,17 @@ export class SingleCourseComponent {
     });
 
     console.log(this.course);
-    
   }
 
   loadCourseDetails(): void {
     this.course = this.learningManagementService.getCourseById(this.courseId);
   }
-  
-  
+
+  addToCart(courseId: number): void {
+    this.cartService.addToCart(courseId);
+  }
+
+  removeFromCart(courseId: number): void {
+    this.cartService.removeFromCart(courseId);
+  }
 }
