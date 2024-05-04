@@ -1,0 +1,77 @@
+<div>
+    <div class="px-16 py-16 flex flex-col gap-8">
+        <div class="flex items-center gap-4">
+            <p class="text-[14px] text-[#334155]">Home</p>
+            <img src="../../../assets/arrow-left.png" alt="" class="rotate-180">
+            <p class="text-[14px] text-[#334155]">Categories</p>
+            <img src="../../../assets/arrow-left.png" alt="" class="rotate-180">
+            <p class="text-[14px] text-[#2563EB]">Shopping Cart</p>
+        </div>
+        <!------- carts --------->
+        <div class="flex justify-between">
+             <!------- cart items --------->
+            <div class="flex flex-col gap-6 w-[60%]">
+                <p class="text-[#334155] text-[14px] border-b-2 pb-2">1 Course in cart</p>
+                <div class="flex flex-col gap-6">
+                    <!------- single item --------->
+                    
+                    <div class="rounded-md border-[1px] border-solid border-[#E2E8F0] shadow-md shadow-[#3B82F61F] py-2 px-2 flex justify-between">
+                        <div class="flex items-center gap-4">
+                            <img src="../../../assets/programming-course.png" alt="" class="w-[119px] rounded-md">
+                            <div>
+                                <h2 class="font-bold text-[18px]">Introduction to User Experience Design</h2>
+                                <p class="text-[#334155] text-[14px]">By John Doe</p>
+                                <div class="flex items-center gap-[6px]">
+                                    <p class="text-[16px] text-[#FEC84B] font-medium">4.6 </p>
+                                    <div class="flex items-center">
+                                        <img src="../../../assets/star.png" alt="" class="w-[15px] h-[15px]">
+                                        <img src="../../../assets/star.png" alt="" class="w-[15px] h-[15px]">
+                                        <img src="../../../assets/star.png" alt="" class="w-[15px] h-[15px]">
+                                        <img src="../../../assets/star.png" alt="" class="w-[15px] h-[15px]">
+                                        <img src="../../../assets/star.png" alt="" class="w-[15px] h-[15px]">
+                                    </div>
+                                    <p class="text-[14px] text-[#334155] border-r-2 border-[#334155] pr-2 font-semibold">(250 rating)</p>
+                                    <p class="text-[14px] text-[#334155] font-semibold">22 Total Hours. 155 Lectures. All levels</p>
+                                </div>
+                                <button class="text-[#DC2626] text-[14px]">Remove</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-between">
+                            
+                            <h1 class="text-[24px] font-bold">$45.00</h1>
+                            <div class="flex items-center gap-2">
+                                <button>-</button>
+                                <span class="px-3 py-2 bg-gray-100">0</span>
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!------- order amount --------->
+            <div class="w-[30%] flex flex-col gap-4">
+                <h1 class="text-[20px] font-bold">Order Details</h1>
+                <div class="bg-[#F8FAFC] order-[1px] border-solid border-[#E2E8F0]  p-4 flex flex-col gap-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <p class="text-[14px] text-[#0F172A]">Price</p>
+                        <h1 class="text-[18px] font-bold">$300.00</h1>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-[14px] text-[#0F172A]">Discount</p>
+                        <h1 class="text-[18px] font-bold">-$10.00</h1>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-[14px] text-[#0F172A]">Tax</p>
+                        <h1 class="text-[18px] font-bold">$20.00</h1>
+                    </div>
+                    <div class="flex justify-between items-center border-t-2 pt-2 border-black">
+                        <h1 class="text-[18px] font-bold">Total</h1>
+                        <h1 class="text-[18px] font-bold">$290.00</h1>
+                    </div>
+                </div>
+                <button class="text-white bg-black rounded-md py-4">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
