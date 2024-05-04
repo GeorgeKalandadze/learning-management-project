@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { CartService } from '../../services/cart/cart.service';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, RouterLink],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
 })

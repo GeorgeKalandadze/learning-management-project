@@ -1,0 +1,111 @@
+<div>
+    <div class="px-16 py-16 flex flex-col gap-8">
+        <div class="flex items-center gap-4">
+            <p class="text-[14px] text-[#334155]">Home</p>
+            <img src="../../../assets/arrow-left.png" alt="" class="rotate-180">
+            <p class="text-[14px] text-[#334155]">Categories</p>
+            <img src="../../../assets/arrow-left.png" alt="" class="rotate-180">
+            <p class="text-[14px] text-[#2563EB]">Checkout</p>
+        </div>
+        <div class="flex justify-between">
+            <div class="rounded border-[1px] border-solid border-[#E2E8F0] p-4 flex flex-col gap-4 w-[60%]">
+                <div class="flex justify-between">
+                    <app-input 
+                        label="Country" 
+                        placeholder="Enter Country"
+                        [width]="'350px'"
+                    ></app-input>
+                    <app-input 
+                        label="State/Union Territory" 
+                        placeholder="Enter State"
+                        [width]="'350px'"
+                    ></app-input>
+                </div>
+                <app-input 
+                    label="Name of Card" 
+                    placeholder="Name of card"
+                ></app-input>
+                <app-input 
+                    label="Card Number" 
+                    placeholder="Card Number"
+                ></app-input>
+                <div class="flex justify-between">
+                    <app-input 
+                        label="Expiry Date" 
+                        placeholder="Enter Expiry Date"
+                        [width]="'350px'"
+                    ></app-input>
+                    <app-input 
+                        label="CVC/CVV" 
+                        placeholder="Enter CVC/CVV"
+                        [width]="'350px'"
+                    ></app-input>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div class="flex justify-between bg-[#F8FAFC] px-3 py-2 rounded-md">
+                        <label  class="text-[14px] font-semibold w-full">
+                            <input type="radio" name="paymentMethod" value="paypal">
+                            PayPal
+                        </label>
+                        <img src="../../../assets/paypal.png" alt="">
+                    </div>
+                    <div class="flex justify-between bg-[#F8FAFC] px-3 py-2 rounded-md">
+                        <label  class="text-[14px] font-semibold w-full">
+                            <input type="radio" name="paymentMethod" value="visa">
+                            Visa
+                        </label>
+                        <img src="../../../assets/visa.png" alt="">
+                    </div>
+                </div>
+            </div>
+             
+            <div class="w-[30%] flex flex-col gap-4">
+                <div class="rounded-md border-[1px] border-solid border-[#E2E8F0] shadow-md shadow-[#3B82F61F] py-2 px-2 flex justify-between">
+                    <div class="flex items-center gap-4">
+                        <img src="../../../assets/programming-course.png" alt="" class="w-[140px] h-full rounded-md">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#2563EB] text-[14px]">By Same person</p>
+                            <h2 class="font-bold text-[14px]">Introduction to User Experience Design</h2>
+                            <p class="text-[14px] text-[#334155]">152 Total Hours. 22 Lectures. All levels</p>
+                            <p class="font-bold text-[16px]">$45.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-md border-[1px] border-solid border-[#E2E8F0] shadow-md shadow-[#3B82F61F] py-2 px-2 flex justify-between">
+                    <div class="flex items-center gap-4">
+                        <img src="../../../assets/programming-course.png" alt="" class="w-[140px] h-full rounded-md">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#2563EB] text-[14px]">By Same person</p>
+                            <h2 class="font-bold text-[14px]">Introduction to User Experience Design</h2>
+                            <p class="text-[14px] text-[#334155]">152 Total Hours. 22 Lectures. All levels</p>
+                            <p class="font-bold text-[16px]">$45.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="text-[20px] font-bold">Order Details</h1>
+                <div class="bg-[#F8FAFC] border-[1px] border-solid border-[#E2E8F0]  p-4 flex flex-col gap-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <p class="text-[14px] text-[#0F172A]">Price</p>
+                        <h1 class="text-[18px] font-bold">777</h1>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-[14px] text-[#0F172A]">Discount</p>
+                        <h1 class="text-[18px] font-bold">-$10.00</h1>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="text-[14px] text-[#0F172A]">Tax</p>
+                        <h1 class="text-[18px] font-bold">$20.00</h1>
+                    </div>
+                    <div class="flex justify-between items-center border-t-2 pt-2 border-black">
+                        <h1 class="text-[18px] font-bold">Total</h1>
+                        <h1 class="text-[18px] font-bold">$290.00</h1>
+                    </div>
+                </div>
+                <a href="" routerLink="/checkout" class="w-full">
+                    <button class="text-white bg-black rounded-md py-4 w-full">Proceed to Checkout</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

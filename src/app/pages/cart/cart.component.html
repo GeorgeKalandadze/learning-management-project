@@ -52,7 +52,7 @@
             <!------- order amount --------->
             <div class="w-[30%] flex flex-col gap-4">
                 <h1 class="text-[20px] font-bold">Order Details</h1>
-                <div class="bg-[#F8FAFC] order-[1px] border-solid border-[#E2E8F0]  p-4 flex flex-col gap-4 rounded-lg">
+                <div class="bg-[#F8FAFC] border-[1px] border-solid border-[#E2E8F0]  p-4 flex flex-col gap-4 rounded-lg">
                     <div class="flex justify-between items-center">
                         <p class="text-[14px] text-[#0F172A]">Price</p>
                         <h1 class="text-[18px] font-bold">{{ getTotalAmount() }}</h1>
@@ -70,7 +70,9 @@
                         <h1 class="text-[18px] font-bold">$290.00</h1>
                     </div>
                 </div>
-                <button class="text-white bg-black rounded-md py-4">Proceed to Checkout</button>
+                <a href="" routerLink="/checkout" class="w-full">
+                    <button class="text-white bg-black rounded-md py-4 w-full">Proceed to Checkout</button>
+                </a>
             </div>
         </div>
     </div>
