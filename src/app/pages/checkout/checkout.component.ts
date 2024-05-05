@@ -8,6 +8,7 @@ import {
   AbstractControl,
   FormGroup,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -20,10 +21,12 @@ export class CheckoutComponent {
   cartItems: any[] = [];
   totalAmount: number = 0;
   checkoutForm: FormGroup = new FormGroup({});
+  formSubmitted: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -91,11 +94,12 @@ export class CheckoutComponent {
     return totalAmount;
   }
 
-  // onSubmit(): void {
-  //   console.log(
-  //     'submitted form',
-  //     this.checkoutForm.value,
-  //     this.checkoutForm.invalid
-  //   );
-  // }
+  onSubmit(): void {
+    this.formSubmitted = true;
+    if (this.checkoutForm.valid) {
+      this.router.navigateByUrl('/order-complete');
+    } else {
+      console.log('Form is invalid. Please fix errors before proceeding.');
+    }
+  }
 }

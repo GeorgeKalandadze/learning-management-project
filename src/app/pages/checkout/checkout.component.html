@@ -19,8 +19,8 @@
                             class="border-[1px] border-solid border-[#E2E8F0] px-4 py-3 rounded-md outline-none" 
                             [ngClass]="{
                                 'border-gray-300': checkoutForm.get('country')?.pristine,
-                                'border-red-500': checkoutForm.get('country')?.invalid && checkoutForm.get('country')?.dirty,
-                                'border-green-500': checkoutForm.get('country')?.valid && checkoutForm.get('country')?.dirty
+                                'border-red-500': checkoutForm.get('country')?.invalid && (checkoutForm.get('country')?.dirty || formSubmitted),
+                                'border-green-500': checkoutForm.get('country')?.valid && (checkoutForm.get('country')?.dirty || formSubmitted)
                             }"
                         >
                     </div>
@@ -33,8 +33,8 @@
                             class="border-[1px] w-full border-solid border-[#E2E8F0] px-4 py-3 rounded-md outline-none"
                             [ngClass]="{
                                 'border-gray-300': checkoutForm.get('state')?.pristine,
-                                'border-red-500': checkoutForm.get('state')?.invalid && checkoutForm.get('state')?.dirty,
-                                'border-green-500': checkoutForm.get('state')?.valid && checkoutForm.get('state')?.dirty
+                                'border-red-500': checkoutForm.get('state')?.invalid && (checkoutForm.get('state')?.dirty || formSubmitted),
+                                'border-green-500': checkoutForm.get('state')?.valid && (checkoutForm.get('state')?.dirty || formSubmitted)
                             }"
                         >
                     </div>
@@ -48,8 +48,8 @@
                         formControlName="cardName" 
                         [ngClass]="{
                             'border-gray-300': checkoutForm.get('cardName')?.pristine,
-                            'border-red-500': checkoutForm.get('cardName')?.invalid && checkoutForm.get('cardName')?.dirty,
-                            'border-green-500': checkoutForm.get('cardName')?.valid && checkoutForm.get('cardName')?.dirty
+                            'border-red-500': checkoutForm.get('cardName')?.invalid && (checkoutForm.get('cardName')?.dirty || formSubmitted),
+                            'border-green-500': checkoutForm.get('cardName')?.valid && (checkoutForm.get('cardName')?.dirty || formSubmitted)
                         }"
                     >
                 </div>
@@ -62,9 +62,9 @@
                         formControlName="cardNumber" 
                         [ngClass]="{
                             'border-gray-300': checkoutForm.get('cardNumber')?.pristine,
-                            'border-red-500': checkoutForm.get('cardNumber')?.invalid && checkoutForm.get('cardNumber')?.dirty,
-                            'border-green-500': checkoutForm.get('cardNumber')?.valid && checkoutForm.get('cardNumber')?.dirty
-                        }" 
+                            'border-red-500': checkoutForm.get('cardNumber')?.invalid && (checkoutForm.get('cardNumber')?.dirty || formSubmitted),
+                            'border-green-500': checkoutForm.get('cardNumber')?.valid && (checkoutForm.get('cardNumber')?.dirty || formSubmitted)
+                        }"
                     >
                 </div>
                 <div class="flex justify-between w-full">
@@ -77,9 +77,9 @@
                             formControlName="expiryDate" 
                             [ngClass]="{
                                 'border-gray-300': checkoutForm.get('expiryDate')?.pristine,
-                                'border-red-500': checkoutForm.get('expiryDate')?.invalid && checkoutForm.get('expiryDate')?.dirty,
-                                'border-green-500': checkoutForm.get('expiryDate')?.valid && checkoutForm.get('expiryDate')?.dirty
-                            }" 
+                                'border-red-500': checkoutForm.get('expiryDate')?.invalid && (checkoutForm.get('expiryDate')?.dirty || formSubmitted),
+                                'border-green-500': checkoutForm.get('expiryDate')?.valid && (checkoutForm.get('expiryDate')?.dirty || formSubmitted)
+                            }"
                         >
                     </div>
                     <div class="flex flex-col gap-2 w-[350px]" >
@@ -91,8 +91,8 @@
                             class="border-[1px] border-solid px-4 py-3 rounded-md outline-none" 
                             [ngClass]="{
                                 'border-gray-300': checkoutForm.get('cvc')?.pristine,
-                                'border-red-500': checkoutForm.get('cvc')?.invalid && checkoutForm.get('cvc')?.dirty,
-                                'border-green-500': checkoutForm.get('cvc')?.valid && checkoutForm.get('cvc')?.dirty
+                                'border-red-500': checkoutForm.get('cvc')?.invalid && (checkoutForm.get('cvc')?.dirty || formSubmitted),
+                                'border-green-500': checkoutForm.get('cvc')?.valid && (checkoutForm.get('cvc')?.dirty || formSubmitted)
                             }"
                         >
                     </div>
@@ -147,9 +147,7 @@
                         <h1 class="text-[18px] font-bold">$290.00</h1>
                     </div>
                 </div>
-                <a href="" routerLink="/checkout" class="w-full">
-                    <button class="text-white bg-black rounded-md py-4 w-full">Proceed to Checkout</button>
-                </a>
+                   <button (click)="onSubmit()" class="text-white bg-black rounded-md py-4 w-full">Proceed to Checkout</button>
             </div>
         </div>
     </div>
