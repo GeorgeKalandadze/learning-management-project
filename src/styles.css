@@ -47,4 +47,16 @@
   transform: rotate(180deg);
 }
 
+.gray-border {
+    border-color: #E2E8F0;
+}
+
+.red-border {
+    border-color: #EF4444;
+}
+
+.green-border {
+    border-color: #22C55E;
+}
+
 

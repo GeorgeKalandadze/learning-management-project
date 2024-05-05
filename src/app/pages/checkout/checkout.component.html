@@ -7,87 +7,132 @@
             <img src="../../../assets/arrow-left.png" alt="" class="rotate-180">
             <p class="text-[14px] text-[#2563EB]">Checkout</p>
         </div>
-        <div class="flex justify-between">
-            <div class="rounded border-[1px] border-solid border-[#E2E8F0] p-4 flex flex-col gap-4 w-[60%]">
+        <div  class="flex justify-between">
+            <form [formGroup]="checkoutForm"   class="rounded border-[1px] border-solid border-[#E2E8F0] p-4 flex flex-col gap-4 w-[60%]">
                 <div class="flex justify-between">
-                    <app-input 
-                        label="Country" 
-                        placeholder="Enter Country"
-                        [width]="'350px'"
-                    ></app-input>
-                    <app-input 
-                        label="State/Union Territory" 
-                        placeholder="Enter State"
-                        [width]="'350px'"
-                    ></app-input>
+                    <div class="flex flex-col gap-2 w-[350px]" >
+                        <label class="text-[14px] font-semibold w-full">Country</label>
+                        <input 
+                            type="text" 
+                            placeholder="Enter Country" 
+                            formControlName="country"
+                            class="border-[1px] border-solid border-[#E2E8F0] px-4 py-3 rounded-md outline-none" 
+                            [ngClass]="{
+                                'border-gray-300': checkoutForm.get('country')?.pristine,
+                                'border-red-500': checkoutForm.get('country')?.invalid && checkoutForm.get('country')?.dirty,
+                                'border-green-500': checkoutForm.get('country')?.valid && checkoutForm.get('country')?.dirty
+                            }"
+                        >
+                    </div>
+                    <div class="flex flex-col gap-2 w-[350px]" >
+                        <label class="text-[14px] font-semibold ]">State/Union Territory</label>
+                        <input 
+                            type="text" 
+                            placeholder="Enter State" 
+                            formControlName="state"
+                            class="border-[1px] w-full border-solid border-[#E2E8F0] px-4 py-3 rounded-md outline-none"
+                            [ngClass]="{
+                                'border-gray-300': checkoutForm.get('state')?.pristine,
+                                'border-red-500': checkoutForm.get('state')?.invalid && checkoutForm.get('state')?.dirty,
+                                'border-green-500': checkoutForm.get('state')?.valid && checkoutForm.get('state')?.dirty
+                            }"
+                        >
+                    </div>
                 </div>
-                <app-input 
-                    label="Name of Card" 
-                    placeholder="Name of card"
-                ></app-input>
-                <app-input 
-                    label="Card Number" 
-                    placeholder="Card Number"
-                ></app-input>
-                <div class="flex justify-between">
-                    <app-input 
-                        label="Expiry Date" 
-                        placeholder="Enter Expiry Date"
-                        [width]="'350px'"
-                    ></app-input>
-                    <app-input 
-                        label="CVC/CVV" 
-                        placeholder="Enter CVC/CVV"
-                        [width]="'350px'"
-                    ></app-input>
+                <div class="flex flex-col gap-2" >
+                    <label class="text-[14px] font-semibold w-full">Name of Card</label>
+                    <input 
+                        type="text" 
+                        placeholder="Name of card" 
+                        class="border-[1px] border-solid border-[#E2E8F0] px-4 py-3 rounded-md outline-none"
+                        formControlName="cardName" 
+                        [ngClass]="{
+                            'border-gray-300': checkoutForm.get('cardName')?.pristine,
+                            'border-red-500': checkoutForm.get('cardName')?.invalid && checkoutForm.get('cardName')?.dirty,
+                            'border-green-500': checkoutForm.get('cardName')?.valid && checkoutForm.get('cardName')?.dirty
+                        }"
+                    >
+                </div>
+                <div class="flex flex-col gap-2" >
+                    <label class="text-[14px] font-semibold w-full">Card Number</label>
+                    <input 
+                        type="text" 
+                        placeholder="Card Number" 
+                        class="border-[1px] border-solid border-[#E2E8F0] px-4 py-3 rounded-md outline-none"
+                        formControlName="cardNumber" 
+                        [ngClass]="{
+                            'border-gray-300': checkoutForm.get('cardNumber')?.pristine,
+                            'border-red-500': checkoutForm.get('cardNumber')?.invalid && checkoutForm.get('cardNumber')?.dirty,
+                            'border-green-500': checkoutForm.get('cardNumber')?.valid && checkoutForm.get('cardNumber')?.dirty
+                        }" 
+                    >
+                </div>
+                <div class="flex justify-between w-full">
+                    <div class="flex flex-col gap-2 w-[350px]" >
+                        <label class="text-[14px] font-semibold w-full">Expiry Date</label>
+                        <input 
+                            type="date" 
+                            placeholder="Enter Expiry Date" 
+                            class="border-[1px] border-solid border-[#E2E8F0] px-4 py-3 rounded-md outline-none" 
+                            formControlName="expiryDate" 
+                            [ngClass]="{
+                                'border-gray-300': checkoutForm.get('expiryDate')?.pristine,
+                                'border-red-500': checkoutForm.get('expiryDate')?.invalid && checkoutForm.get('expiryDate')?.dirty,
+                                'border-green-500': checkoutForm.get('expiryDate')?.valid && checkoutForm.get('expiryDate')?.dirty
+                            }" 
+                        >
+                    </div>
+                    <div class="flex flex-col gap-2 w-[350px]" >
+                        <label class="text-[14px] font-semibold w-full">CVC/CVV</label>
+                        <input 
+                            formControlName="cvc"
+                            type="text" 
+                            placeholder="Enter CVC/CVV"  
+                            class="border-[1px] border-solid px-4 py-3 rounded-md outline-none" 
+                            [ngClass]="{
+                                'border-gray-300': checkoutForm.get('cvc')?.pristine,
+                                'border-red-500': checkoutForm.get('cvc')?.invalid && checkoutForm.get('cvc')?.dirty,
+                                'border-green-500': checkoutForm.get('cvc')?.valid && checkoutForm.get('cvc')?.dirty
+                            }"
+                        >
+                    </div>
                 </div>
                 <div class="flex flex-col gap-3">
                     <div class="flex justify-between bg-[#F8FAFC] px-3 py-2 rounded-md">
                         <label  class="text-[14px] font-semibold w-full">
-                            <input type="radio" name="paymentMethod" value="paypal">
+                            <input type="radio" formControlName="paymentMethod" value="paypal">
                             PayPal
                         </label>
                         <img src="../../../assets/paypal.png" alt="">
                     </div>
                     <div class="flex justify-between bg-[#F8FAFC] px-3 py-2 rounded-md">
                         <label  class="text-[14px] font-semibold w-full">
-                            <input type="radio" name="paymentMethod" value="visa">
+                            <input type="radio" formControlName="paymentMethod" value="visa">
                             Visa
                         </label>
                         <img src="../../../assets/visa.png" alt="">
                     </div>
                 </div>
-            </div>
-             
-            <div class="w-[30%] flex flex-col gap-4">
-                <div class="rounded-md border-[1px] border-solid border-[#E2E8F0] shadow-md shadow-[#3B82F61F] py-2 px-2 flex justify-between">
-                    <div class="flex items-center gap-4">
-                        <img src="../../../assets/programming-course.png" alt="" class="w-[140px] h-full rounded-md">
-                        <div class="flex flex-col gap-2">
-                            <p class="text-[#2563EB] text-[14px]">By Same person</p>
-                            <h2 class="font-bold text-[14px]">Introduction to User Experience Design</h2>
-                            <p class="text-[14px] text-[#334155]">152 Total Hours. 22 Lectures. All levels</p>
-                            <p class="font-bold text-[16px]">$45.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded-md border-[1px] border-solid border-[#E2E8F0] shadow-md shadow-[#3B82F61F] py-2 px-2 flex justify-between">
-                    <div class="flex items-center gap-4">
-                        <img src="../../../assets/programming-course.png" alt="" class="w-[140px] h-full rounded-md">
-                        <div class="flex flex-col gap-2">
-                            <p class="text-[#2563EB] text-[14px]">By Same person</p>
-                            <h2 class="font-bold text-[14px]">Introduction to User Experience Design</h2>
-                            <p class="text-[14px] text-[#334155]">152 Total Hours. 22 Lectures. All levels</p>
-                            <p class="font-bold text-[16px]">$45.00</p>
-                        </div>
-                    </div>
-                </div>
+            </form>
 
+             
+            <div  class="w-[30%] flex flex-col gap-4">
+                <div *ngFor="let item of cartItems" class="rounded-md border-[1px] border-solid border-[#E2E8F0] shadow-md shadow-[#3B82F61F] py-2 px-2 flex justify-between">
+                    <div class="flex items-center gap-4">
+                        <img src="../../../assets/programming-course.png" alt="" class="w-[140px] h-full rounded-md">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[#2563EB] text-[14px]">By {{item.author}}</p>
+                            <h2 class="font-bold text-[14px]">{{item.title}}</h2>
+                            <p class="text-[14px] text-[#334155]">{{item.totalHours}} Total Hours. {{item .totalLectures}} Lectures. All levels</p>
+                            <p class="font-bold text-[16px]">${{item.price}}</p>
+                        </div>
+                    </div>
+                </div>
                 <h1 class="text-[20px] font-bold">Order Details</h1>
                 <div class="bg-[#F8FAFC] border-[1px] border-solid border-[#E2E8F0]  p-4 flex flex-col gap-4 rounded-lg">
                     <div class="flex justify-between items-center">
                         <p class="text-[14px] text-[#0F172A]">Price</p>
-                        <h1 class="text-[18px] font-bold">777</h1>
+                        <h1 class="text-[18px] font-bold">{{ getTotalAmount() }}</h1>
                     </div>
                     <div class="flex justify-between items-center">
                         <p class="text-[14px] text-[#0F172A]">Discount</p>
