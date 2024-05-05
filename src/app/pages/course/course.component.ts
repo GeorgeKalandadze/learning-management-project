@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { LearningManagementService } from '../../services/learning-management.service';
 import { CourseCardComponent } from '../../components/course-card/course-card.component';
 import { InstructorCardComponent } from '../../components/instructor-card/instructor-card.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-course',
   standalone: true,
-  imports: [NgIf, NgClass, CourseCardComponent, NgFor, InstructorCardComponent],
+  imports: [NgIf, NgClass, CourseCardComponent, NgFor, InstructorCardComponent, RouterLink],
   templateUrl: './course.component.html',
   styleUrl: './course.component.css',
 })

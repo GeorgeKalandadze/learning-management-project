@@ -3,13 +3,13 @@ import { LearningManagementService } from '../../services/learning-management.se
 import { CustomerCardComponent } from '../../components/customer-card/customer-card.component';
 import { NgFor } from '@angular/common';
 import { CourseCardComponent } from '../../components/course-card/course-card.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-single-course',
   standalone: true,
-  imports: [CourseCardComponent, CustomerCardComponent, NgFor],
+  imports: [CourseCardComponent, CustomerCardComponent, NgFor, RouterLink],
   templateUrl: './single-course.component.html',
   styleUrl: './single-course.component.css',
 })
